@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Slide show</title>
+ <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+<style>
+.screen1
+{
+margin-top: 50px;
+margin-bottom: 50px;
+
+}
+.middlecontent {
+	height: 506px;
+
+}
+.middlecontent .slideshow {
+	height: 320px;
+}
+#home_slide img {
+	height: 506px;
+	width: 1367px;
+}
+.overlay {
+	
+	height: 195px;
+	line-height: 195px;
+	margin-top: -190px;
+	position: relative;
+	z-index: 100;
+}
+#prev {
+	background: url('l_arrow.png') 50% 50% no-repeat;
+	display: block;
+	float: left;
+	text-indent: -9999px;
+	width: 28px;
+}
+#next {
+	background: url('r_arrow.png') 50% 50% no-repeat;
+	display: block;
+	float: right;
+	text-indent: -9999px;
+	width: 28px;
+}
+</style>
+</head>
+<body>
+<div class="screen1">
+<div class="middlecontent">       
+            <div class="slideshow" id="home_slide">
+              <img src="one.jpg" width="1358" height="506" />
+              <img src="two.jpg" width="1358" height="506" />
+              <img src="three.jpg" width="1358" height="506" />
+              <img src="four.jpg" width="1358" height="506" />
+            </div>
+<div class="overlay"><a id="prev" href="#" title="Prev">Prev</a><a id="next" href="#" title="Next">Next</a></div></div></div>
+<script src="jquery.min.js"></script>
+<script src="jquery.cycle.lite.js"></script>
+<script>
+$(function(){
+
+  	  	$('#home_slide').cycle({
+  		fx: 'fade',
+  		timeout: 5, 
+  		next:   '#next', 
+  		prev:   '#prev'
+  	});
+    
+});
+</script>
+</body>
+</html>
+
